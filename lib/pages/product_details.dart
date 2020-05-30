@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutterappb/main.dart';
 
 /*
 * first return Scaffold .. ( appbar)
@@ -37,7 +38,13 @@ class _ProductDetailsState extends State<ProductDetails> {
         //  elevation to shadow for app bar
         elevation: 0.1,
         backgroundColor: Colors.red,
-        title: Text('المتجر '),
+        title: InkWell(
+          child: Text('المتجر '),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => new HomePage()));
+          },
+        ),
         // actions to create IconButton and on Pressed
         actions: <Widget>[
           // first  IconButton search
@@ -348,15 +355,18 @@ class _ProductDetailsState extends State<ProductDetails> {
             ],
           ),
           Divider(),
-          Text(
-            "منتجات متشابهة",
-            textDirection: TextDirection.rtl,
-            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text(
+              "منتجات متشابهة",
+              textDirection: TextDirection.rtl,
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+            ),
           ),
           Divider(),
           // =================== add Similar_single_prod =============
           Container(
-            height: 360.0,
+            height: 340.0,
             child: Similer_products(),
           ),
         ],
