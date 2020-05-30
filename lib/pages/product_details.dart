@@ -129,47 +129,47 @@ class _ProductDetailsState extends State<ProductDetails> {
               //============= the quantity ==================
               //============= the begin quantity Dialog ==================
               Expanded(
-                // begin MaterialButton
+                  // begin MaterialButton
                   child: MaterialButton(
-                    onPressed: () {
-                      // begin showDialog
-                      showDialog(
-                          context: context,
-                          builder: (context) {
-                            return new AlertDialog(
-                              title:
+                onPressed: () {
+                  // begin showDialog
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return new AlertDialog(
+                          title:
                               Text("الكمية", textDirection: TextDirection.rtl),
-                              content: new Text(
-                                "اختار الكمية :",
-                                style: TextStyle(),
-                                textDirection: TextDirection.rtl,
+                          content: new Text(
+                            "اختار الكمية :",
+                            style: TextStyle(),
+                            textDirection: TextDirection.rtl,
+                          ),
+                          actions: [
+                            MaterialButton(
+                              onPressed: () {
+                                // ===== this is to close  MaterialButton =========
+                                Navigator.of(context).pop(context);
+                              },
+                              child: Text(
+                                "Close",
+                                style: TextStyle(color: Colors.green),
                               ),
-                              actions: [
-                                MaterialButton(
-                                  onPressed: () {
-                                    // ===== this is to close  MaterialButton =========
-                                    Navigator.of(context).pop(context);
-                                  },
-                                  child: Text(
-                                    "Close",
-                                    style: TextStyle(color: Colors.green),
-                                  ),
-                                )
-                              ],
-                            );
-                          });
-                    },
-                    // ============= the size Button ==================
-                    color: Colors.white,
-                    textColor: Colors.grey,
-                    elevation: 0.2,
-                    child: Row(
-                      children: [
-                        Expanded(child: Text("الكمية")),
-                        Expanded(child: Icon(Icons.arrow_drop_down))
-                      ],
-                    ),
-                  )),
+                            )
+                          ],
+                        );
+                      });
+                },
+                // ============= the size Button ==================
+                color: Colors.white,
+                textColor: Colors.grey,
+                elevation: 0.2,
+                child: Row(
+                  children: [
+                    Expanded(child: Text("الكمية")),
+                    Expanded(child: Icon(Icons.arrow_drop_down))
+                  ],
+                ),
+              )),
 
               //******************* the end  price  ***************
 
@@ -177,86 +177,86 @@ class _ProductDetailsState extends State<ProductDetails> {
               //============= the begin colors Dialog ==================
               Expanded(
                   child: MaterialButton(
-                    onPressed: () {
-                      showDialog(
-                          context: context,
-                          builder: (context) {
-                            return new AlertDialog(
-                              title:
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return new AlertDialog(
+                          title:
                               Text("الألوان", textDirection: TextDirection.rtl),
-                              content: new Text(
-                                "اختار اللون :",
-                                style: TextStyle(),
-                                textDirection: TextDirection.rtl,
+                          content: new Text(
+                            "اختار اللون :",
+                            style: TextStyle(),
+                            textDirection: TextDirection.rtl,
+                          ),
+                          actions: [
+                            MaterialButton(
+                              onPressed: () {
+                                // ===== this is to close  MaterialButton =========
+                                Navigator.of(context).pop(context);
+                              },
+                              child: Text(
+                                "Close",
+                                style: TextStyle(color: Colors.green),
                               ),
-                              actions: [
-                                MaterialButton(
-                                  onPressed: () {
-                                    // ===== this is to close  MaterialButton =========
-                                    Navigator.of(context).pop(context);
-                                  },
-                                  child: Text(
-                                    "Close",
-                                    style: TextStyle(color: Colors.green),
-                                  ),
-                                )
-                              ],
-                            );
-                          });
-                    },
-                    color: Colors.white,
-                    textColor: Colors.grey,
-                    elevation: 0.2,
-                    // ========
-                    child: Row(
-                      children: [
-                        Expanded(child: Text("الألوان")),
-                        Expanded(child: Icon(Icons.arrow_drop_down))
-                      ],
-                    ),
-                  )),
+                            )
+                          ],
+                        );
+                      });
+                },
+                color: Colors.white,
+                textColor: Colors.grey,
+                elevation: 0.2,
+                // ========
+                child: Row(
+                  children: [
+                    Expanded(child: Text("الألوان")),
+                    Expanded(child: Icon(Icons.arrow_drop_down))
+                  ],
+                ),
+              )),
 
               //============= the Size ==================
               //============= the begin size Dialog ==================
               Expanded(
                   child: MaterialButton(
-                    onPressed: () {
-                      showDialog(
-                          context: context,
-                          builder: (context) {
-                            return new AlertDialog(
-                              title: Text("المقاسات",
-                                  textDirection: TextDirection.rtl),
-                              content: new Text(
-                                "اختار من المقاسات التالية :",
-                                style: TextStyle(),
-                                textDirection: TextDirection.rtl,
+                onPressed: () {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return new AlertDialog(
+                          title: Text("المقاسات",
+                              textDirection: TextDirection.rtl),
+                          content: new Text(
+                            "اختار من المقاسات التالية :",
+                            style: TextStyle(),
+                            textDirection: TextDirection.rtl,
+                          ),
+                          actions: [
+                            MaterialButton(
+                              onPressed: () {
+                                // ===== this is to close  MaterialButton =========
+                                Navigator.of(context).pop(context);
+                              },
+                              child: Text(
+                                "Close",
+                                style: TextStyle(color: Colors.green),
                               ),
-                              actions: [
-                                MaterialButton(
-                                  onPressed: () {
-                                    // ===== this is to close  MaterialButton =========
-                                    Navigator.of(context).pop(context);
-                                  },
-                                  child: Text(
-                                    "Close",
-                                    style: TextStyle(color: Colors.green),
-                                  ),
-                                )
-                              ],
-                            );
-                          });
-                    },
-                    color: Colors.white,
-                    textColor: Colors.grey,
-                    elevation: 0.2,
-                    child: Row(
-                      children: [
-                        Expanded(child: Text("المقاس")),
-                        Expanded(child: Icon(Icons.arrow_drop_down))
-                      ],
-                    ),
-                  ))
+                            )
+                          ],
+                        );
+                      });
+                },
+                color: Colors.white,
+                textColor: Colors.grey,
+                elevation: 0.2,
+                child: Row(
+                  children: [
+                    Expanded(child: Text("المقاس")),
+                    Expanded(child: Icon(Icons.arrow_drop_down))
+                  ],
+                ),
+              ))
             ],
           ),
 
@@ -347,6 +347,13 @@ class _ProductDetailsState extends State<ProductDetails> {
               )
             ],
           ),
+          Divider(),
+          Text(
+            "منتجات متشابهة",
+            textDirection: TextDirection.rtl,
+            style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+          ),
+          Divider(),
           // =================== add Similar_single_prod =============
           Container(
             height: 360.0,
@@ -497,4 +504,3 @@ class Similar_single_prod extends StatelessWidget {
     );
   }
 }
-
