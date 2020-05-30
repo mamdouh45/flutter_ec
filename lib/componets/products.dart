@@ -97,7 +97,7 @@ class Single_prod extends StatelessWidget {
     return Card(
       // Hero is style of design card image & pass tag her we define tag expended pop image asset
       child: Hero(
-          tag: prod_name,
+          tag: Text("اhero1"),
           child: Material(
             child: InkWell(
               // ()=> علانة اليساوي والأكبر من تعني اننا هنعيد قيمة من الفانكشن
@@ -106,9 +106,8 @@ class Single_prod extends StatelessWidget {
               *after send page we make model var and constructor another page Product_Details.dart
               * and initialize final var from Product_Details_name: constructor single_product
               * */
-              onTap: () =>
-                  Navigator.of(context).push(new MaterialPageRoute(
-                    // ProductDetails is class in Product_details.dart
+              onTap: () => Navigator.of(context).push(new MaterialPageRoute(
+                  // ProductDetails is class in Product_details.dart
                     /*
                * we passing value of the product to ProductDetails
                * */

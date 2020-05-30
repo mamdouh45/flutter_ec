@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:carousel_pro/carousel_pro.dart';
 
@@ -47,8 +49,8 @@ class _HomePageState extends State<HomePage> {
           AssetImage('images/m2.jpg'),
         ],
         autoplay: false,
-    // animationCurve: Curves.fastOutSlowIn,
-      //   animationDuration: Duration(milliseconds: 1000),
+        // animationCurve: Curves.fastOutSlowIn,
+        //   animationDuration: Duration(milliseconds: 1000),
         dotSize: 4.0,
         indicatorBgPadding: 2.0,
       ),
@@ -59,28 +61,31 @@ class _HomePageState extends State<HomePage> {
         //  elevation to shadow for app bar
         elevation: 0.1,
         backgroundColor: Colors.red,
-        title: Text('Fashapp'),
+        title: Text(
+          'ديكوراتنا',
+          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
+        ),
         // actions to create IconButton and on Pressed
         actions: <Widget>[
           // first  IconButton search
-          new IconButton(
+          /*new IconButton(
               icon: Icon(
                 Icons.search,
                 color: Colors.white,
               ),
-              onPressed: () {}),
+              onPressed: () {}),*/
           //  second IconButton shopping_cart
-          new IconButton(
+          /*   new IconButton(
               icon: Icon(
                 Icons.shopping_cart,
                 color: Colors.white,
               ),
-              onPressed: () {})
+              onPressed: () {})*/
         ],
       ),
 
       // make drawer: input child: new ListView
-      drawer: new Drawer(
+      endDrawer: new Drawer(
         child: new ListView(
           children: <Widget>[
 
@@ -132,8 +137,8 @@ class _HomePageState extends State<HomePage> {
             InkWell(
               onTap: (){},
               child: ListTile(
-                title: Text('Categoris'),
-                leading: Icon(Icons.dashboard),
+                title: Text('ShoppingCard'),
+                leading: Icon(Icons.shopping_cart),
               ),
             ),
 
@@ -148,7 +153,7 @@ class _HomePageState extends State<HomePage> {
 
             // make Divider() class to Divider line in drawer
             Divider(
-              color: Colors.deepPurpleAccent
+                color: Colors.deepPurpleAccent
             ),
 
             InkWell(
