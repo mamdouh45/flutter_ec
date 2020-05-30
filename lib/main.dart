@@ -21,8 +21,10 @@ class HomePage extends StatefulWidget {
   * first Scaffold(appBar
   * second drawer:
   *  third make body new ListView input (image_carousel class (up), )
+  * import 'componets/products.dart';
   *
-  * */
+  *
+  *  */
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -185,6 +187,7 @@ class _HomePageState extends State<HomePage> {
             child: new Text('Recent products'),),
 
           //grid view
+          // child import class Products()
           Container(
             height: 320.0,
             child: Products(),
