@@ -6,6 +6,7 @@ import 'package:carousel_pro/carousel_pro.dart';
 //my own imports
 import 'componets/horizontal_listview.dart';
 import 'componets/products.dart';
+import 'package:flutterappb/pages/cart.dart';
 
 // start
 void main() {
@@ -68,24 +69,28 @@ class _HomePageState extends State<HomePage> {
         // actions to create IconButton and on Pressed
         actions: <Widget>[
           // first  IconButton search
-          /*new IconButton(
+          new IconButton(
               icon: Icon(
                 Icons.search,
                 color: Colors.white,
               ),
-              onPressed: () {}),*/
+              onPressed: () {}),
           //  second IconButton shopping_cart
-          /*   new IconButton(
+          new IconButton(
               icon: Icon(
                 Icons.shopping_cart,
                 color: Colors.white,
               ),
-              onPressed: () {})*/
+              onPressed: () {
+                //========== this Nav to go Cart page =========================
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => new Cart()));
+              })
         ],
       ),
 
       // make drawer: input child: new ListView
-      endDrawer: new Drawer(
+      drawer: new Drawer(
         child: new ListView(
           children: <Widget>[
 
@@ -135,7 +140,10 @@ class _HomePageState extends State<HomePage> {
             ),
 
             InkWell(
-              onTap: (){},
+              onTap: () {
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (context) => Cart()));
+              },
               child: ListTile(
                 title: Text('ShoppingCard'),
                 leading: Icon(Icons.shopping_cart),
