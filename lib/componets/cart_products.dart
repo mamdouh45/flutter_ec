@@ -55,7 +55,7 @@ class _Cart_productsState extends State<Cart_products> {
           cart_prod_pricture: Product_on_the_Cart[index]["picture"],
           cart_prod_price: Product_on_the_Cart[index]["price"],
           cart_prod_size: Product_on_the_Cart[index]["size"],
-          cart_prod_color: Product_on_the_Cart[index]["color"],
+          cart_prod_color: Product_on_the_Cart[index]["Color"],
           cart_prod_Qty: Product_on_the_Cart[index]["quantity"],
         );
       },
@@ -82,27 +82,87 @@ class Single_cart_product extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      elevation: 3.0,
       child: ListTile(
+        // ============== Leading section image ================ //
+        leading: Image.asset(
+          cart_prod_pricture,
+        ),
+        // ============== title section image ================ //
         title: Text(
           cart_prod_name,
-          textDirection: TextDirection.rtl,
         ),
         subtitle: Column(
           children: [
             Row(
-              textDirection: TextDirection.rtl,
               children: [
+                //================= this section is size ============= //
                 Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: EdgeInsets.all(0.0),
                   child: Text("المقاس"),
                 ),
                 Padding(
-                  padding: EdgeInsets.all(8.0),
-                  child: Text(cart_prod_size),
-                )
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                    cart_prod_size,
+                    style: TextStyle(color: Colors.red),
+                  ),
+                ),
+                //================= this section is Color ============= //
+                Padding(
+                  padding: EdgeInsets.fromLTRB(8.0, 8.0, 20.0, 8.0),
+                  child: Text("اللون"),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                    cart_prod_color,
+                    style: TextStyle(color: Colors.red),
+                  ),
+                ),
+                //================= this section is Qty ============= //
+
+                /*Padding(
+                  padding: EdgeInsets.fromLTRB(8.0, 8.0, 20.0, 8.0),
+                  child: Text("الكمية"),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(4.0),
+                  child: Text(
+                    cart_prod_Qty.toString(),
+                    style: TextStyle(color: Colors.red),
+                  ),
+                ),*/
               ],
             ),
-            Text("a"),
+            //================= this section is price ============= //
+            Container(
+                alignment: Alignment.topRight,
+                child: Row(
+                  children: [
+                    Text(
+                      "جم",
+                      textDirection: TextDirection.rtl,
+                      style: TextStyle(color: Colors.red),
+                    ),
+                    Text(
+                      cart_prod_price.toString(),
+                      style: TextStyle(
+                          fontSize: 17.0,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.red),
+                    ),
+                  ],
+                ))
+          ],
+        ),
+        // ===================
+        trailing: Column(
+          children: [
+            IconButton(icon: Icon(Icons.arrow_drop_up), onPressed: () {}),
+            IconButton(icon: Icon(Icons.arrow_drop_down), onPressed: () {}),
+
+            /*  IconButton(icon: Icon(Icons.arrow_drop_down), onPressed: (){})*/
           ],
         ),
       ),
